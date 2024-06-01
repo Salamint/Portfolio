@@ -10,8 +10,17 @@
 
 	<body>
 		<header>
-			<h1>Portfolio</h1>
-			<nav>
+			<div>
+				<h1>Portfolio</h1>
+				<button id="main-burger-button" class="menu-control" onclick="showMainMenu()">
+					<img class="icon" src="images/icons/dark/menu.svg" width="40" height="40">
+				</button>
+				<button id="hide-main-menu" class="menu-control" onclick="hideMainMenu()">
+					<img class="icon" src="images/icons/dark/xmark.svg" width="40" height="40">
+				</button>
+			</div>
+			<hr id="main-menu-separator">
+			<nav id="main-menu">
 				<a href="index.html">Home</a>
 				<a href="skills.html">Skills</a>
 				<a href="history.html">History</a>
@@ -34,36 +43,52 @@
 			<hr>
 
 			<div id="content">
-				<aside id="nav-menu">
+				<button id="nav-burger-button" class="menu-control" onclick="showNavMenu()">
+					<img class="icon" src="images/icons/dark/menu.svg" width="40" height="40">
+				</button>
+				<aside id="table-of-contents">
 					<nav>
 						<p>Contents [<a href="#">Go to the top</a>]</p>
+						<button id="hide-nav-menu" class="menu-control" onclick="hideNavMenu()">
+							<img class="icon" src="images/icons/dark/xmark.svg" width="20" height="20">
+						</button>
 						<hr>
+						<ol>
+							<li><a href="#identity">Who am I ?</a></li>
+							<li><a href="#my-skills">A short summary of my skills.</a></li>
+							<li><a href="#my-journey">My journey as a developer.</a></li>
+						</ol>
 					</nav>
 				</aside>
 
 				<section>
-					<h2>Who am I ?</h2>
+					<h2 id="identity">Who am I ?</h2>
 					<hr>
-					<article id="identity">
+					<article>
+						<p>
+							Student at the second University Institute of Technology of Grenoble, learning computer science.
+						</p>
 						<div id="idfetch" class="terminal">
 							<div class="titlebar">
 								<p>~ : idfetch</p>
-								<button class="close-window" onclick="toggleTerminal('idfetch')">&times;</button>
+								<button class="window-control close-window" onclick="toggleTerminal('idfetch')">
+									<img src="images/icons/dark/xmark.svg" width="18" height="18">
+								</button>
 							</div>
 							<pre>
 [<span class="c10">dupontno</span>@<span class="c10">pc-dg-039-15</span> <span class="c14">~</span>]$ idfetch
-                   -`                    Nolan Dupont @ BUT Informatique
+                   -`                    <span class="c11">Nolan Dupont</span> @ <span class="c11">BUT Informatique</span>
                   .o+`                   -------------------------------
                  `ooo/                   <span class="c11">First name</span>: Nolan
                 `+oooo:                  <span class="c11">Last name</span>: Dupont
                `+oooooo:                 <span class="c11">Gender</span>: Catboy
                -+oooooo+:                <span class="c11">Age</span>: 17 years old
-             `/:-:++oooo+:               Packages: 2105 (pacman)
-            `/++++/+++++++:              Shell: zsh 5.9
-           `/++++++++++++++:             Resolution: 1920x1080 @ 60.00Hz
-          `/+++ooooooooooooo/`           WM: i3
-         ./ooosssso++osssssso+`          Theme: Breeze-Dark [GTK3]
-        .oossssso-````/ossssss+`         Icons: ePapirus-Dark [GTK3]
+             `/:-:++oooo+:               <span class="c11">Formation</span>: Computer science license
+            `/++++/+++++++:              <span class="c11">University</span>: UIT 2 of Grenoble (France)
+           `/++++++++++++++:             <span class="c11">Languages</span>: C, C++, Python, Java, Assembly [68k]
+          `/+++ooooooooooooo/`           <span class="c11">Libraries used</span>: SDL 2, Pygame, Flask
+         ./ooosssso++osssssso+`          <span class="c11">Specializations</span>: Linux, low level programming
+        .oossssso-````/ossssss+`         <span class="c11">Favourite editor</span>: Neovim
        -osssssso.      :ssssssso.        Terminal: scroll
       :osssssss/        osssso+++.       CPU:
      /ossssssss/        +ssssooo/-       GPU: AMD ATI 03:00.0 Lucienne
@@ -76,13 +101,13 @@
 						</div>
 					</article>
 
-					<h2>A short summary of my skills</h2>
+					<h2 id="my-skills">A short summary of my skills.</h2>
 					<hr>
 					<article>
 						<a class="contact-me" href="skills.html">Learn more</a>
 					</article>
 
-					<h2>My journey as a developer</h2>
+					<h2 id="my-journey">My journey as a developer.</h2>
 					<hr>
 					<article>
 						<a class="contact-me" href="history.html">Learn more</a>
@@ -94,21 +119,23 @@
 
 		<footer>
 			<div id="socials">
-				<a href="mailto:ndupont2810@gmail.com">
+				<a href="mailto:ndupont2810@gmail.com" target="_blank">
 					<img class="icon" width="20" height="20" src="images/icons/dark/mail.svg" alt="Mail">
 				</a>
-				<a href="#">
-					<img class="icon" width="20" height="20" src="images/icons/dark/linkedin.svg" alt="LinkedIn">
+				<a href="https://gitlab.com/Salamint" target="_blank">
+					<img class="icon" width="20" height="20" src="images/icons/dark/gitlab.svg" alt="GitLab">
 				</a>
-				<a href="#">...</a>
+				<a href="https://github.com/Salamint" target="_blank">
+					<img class="icon" width="20" height="20" src="images/icons/dark/github.svg" alt="GitHub">
+				</a>
 			</div>
 			<hr>
 			<div>
-				<p>This is a footer</p>
+				<p>Read the <a href="https://github.com/Salamint/Portfolio">source code</a> of this page on GitHub.</p>
 			</div>
 			<hr>
-			<div>
-				<p>This is a footer</p>
+			<div id="copyrights">
+				<p>Icons from <a href="https://fontawesome.com">FontAwesome <img src="images/icons/dark/font-awesome.svg" width="12" height="12"></a>.</p>
 			</div>
 		</footer>
 
