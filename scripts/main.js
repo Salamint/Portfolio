@@ -117,7 +117,7 @@ if (prefersDarkTheme.matches) {
 
 updateThemeButton()
 
-if (window.innerWidth <= 480) {
+if (window.innerWidth <= 768) {
 	for (let i = 0; i < terminals.length; i++) {
 		toggleTerminal(terminals.item(i).id)
 	}

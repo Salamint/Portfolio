@@ -2,6 +2,7 @@
 
 	/* Main variables */
 	--background-color: gainsboro;
+	--border-color: grey;
 	--links-color: #185b57;
 	--page-background-color: darkgrey;
 	--shadow-color: grey;
@@ -49,7 +50,7 @@
 .menu-control {
 	display: none;
 	background-color: var(--softer-background-color);
-	border: solid 1px grey;
+	border: solid 1px var(--border-color);
 	border-radius: 0;
 	padding: 6px 6px 0 6px;
 }
@@ -90,7 +91,7 @@ footer {
 
 main,
 footer {
-	border: solid 1px grey;
+	border: solid 1px var(--border-color);
 	margin: 0 15%;
 }
 
@@ -99,7 +100,7 @@ footer {
 /********************************/
 
 header {
-	border-bottom: solid 1px grey;
+	border-bottom: solid 1px var(--border-color);
 	display: flex;
 	flex-flow: nowrap row;
 	justify-content: space-between;
@@ -116,7 +117,7 @@ header h1 {
 
 header hr {
 	border: none;
-	border-top: solid 1px grey;
+	border-top: solid 1px var(--border-color);
 	display: none;
 	margin: 20px 0;
 }
@@ -131,6 +132,7 @@ header nav {
 	flex-grow: 2;
 	gap: 25px;
 	justify-content: flex-end;
+	align-items: center;
 }
 
 header a {
@@ -193,7 +195,7 @@ main #content {
 
 #dark-theme-toggle, #language {
 	background-color: var(--softer-background-color);
-	border: solid 1px grey;
+	border: solid 1px var(--border-color);
 	color: var(--text-color);
 	font-size: 11pt;
 }
@@ -221,6 +223,7 @@ section {
 section h2 {
 	margin-top: 50px;
 	margin-bottom: 10px;
+	scroll-margin-top: 148px;
 }
 
 section h2:first-child {
@@ -247,7 +250,7 @@ aside a {
 
 aside nav {
 	background-color: var(--softer-background-color);
-	border: solid 1px grey;
+	border: solid 1px var(--border-color);
 	padding: 15px;
 }
 
@@ -300,7 +303,7 @@ footer div {
 
 footer hr {
 	border: none;
-	border-left: solid 1px grey;
+	border-left: solid 1px var(--border-color);
 	margin: 0;
 }
 
@@ -437,7 +440,7 @@ footer #socials a:hover {
 		margin-top: 1px;
 		position: fixed;
 		right: 40px;
-		top: 128px;
+		top: 138px;
 	}
 
 	#hide-nav-menu {
@@ -451,10 +454,7 @@ footer #socials a:hover {
 	section {
 		max-width: 100%;
 	}
-}
 
-/* Tablets */
-@media (max-width: 768px) {
 	main, footer {
 		margin-left: 40px;
 		margin-right: 40px;
@@ -462,7 +462,7 @@ footer #socials a:hover {
 }
 
 /* Phones and mobile devices */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
 	header {
 		flex-direction: column;
 	}
