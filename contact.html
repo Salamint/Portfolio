@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Portfolio</title>
+		<link rel="stylesheet" href="styles/main.css">
+		<link rel="stylesheet" href="styles/contact.css">
+	</head>
+
+	<body>
+		<header>
+			<div>
+				<h1>Portfolio</h1>
+				<button id="main-burger-button" class="menu-control" onclick="showMainMenu()">
+					<img class="icon" src="images/icons/dark/menu.svg" width="40" height="40">
+				</button>
+				<button id="hide-main-menu" class="menu-control" onclick="hideMainMenu()">
+					<img class="icon" src="images/icons/dark/xmark.svg" width="40" height="40">
+				</button>
+			</div>
+			<hr id="main-menu-separator">
+			<nav id="main-menu">
+				<a href="index.html">Home</a>
+				<a href="skills.html">Skills</a>
+				<a href="history.html">History</a>
+				<a class="contact-me" href="contact.html">Contact me</a>
+			</nav>
+		</header>
+
+		<main>
+			<div id="title">
+				<h1>Contact</h1>
+				<div id="page-controls">
+					<button id="dark-theme-toggle"></button>
+					<select id="language" name="language">
+						<option value="english" onclick="window.location.href = 'index.html'" selected>English</option>
+						<option value="french" onclick="window.location.href = 'fr/index.html'" disabled>Français</option>
+					</select>
+				</div>
+			</div>
+
+			<hr>
+
+			<div id="content">
+				<form class="contacts" method="post">
+					<h2>Email me :</h2>
+
+					<hr>
+
+					<div id="name">
+						<div class="field">
+							<label for="firstname">First name*:</label>
+							<input name="firstname" type="text" placeholder="John" required>
+						</div>
+						<div class="field">
+							<label for="lastname">Last name*:</label>
+							<input name="lastname" type="text" placeholder="Doe" required>
+						</div>
+					</div>
+
+					<div class="field">
+						<label for="email">Eamil*:</label>
+						<input name="email" type="email" placeholder="johndoe@mailserver.com" required>
+					</div>
+
+					<div class="field">
+						<label for="reason">Reason*:</label>
+						<textarea
+							name="reason"
+							placeholder="Greetings, my name is John Doe and..."
+							required></textarea>
+					</div>
+
+					<input id="send" name="send" type="submit" value="Send">
+				</form>
+
+				<div class="contacts">
+					<h2>My GitLab and GitHub accounts :</h2>
+					<hr>
+					<div id="accounts">
+						<a href="https://gitlab.com/Salamint" target="_blank">
+							<img class="icon" width="40" height="40" src="images/icons/dark/gitlab.svg" alt="Mail">
+							<p>GitLab</p>
+						</a>
+
+						<a href="https://github.com/Salamint" target="_blank">
+							<img class="icon" width="40" height="40" src="images/icons/dark/github.svg" alt="Mail">
+							<p>GitHub</p>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<hr>
+
+			<h2>Or contact me by email :</h2>
+			<a href="mailto:ndupont2810@gmail.com" target="_blank">ndupont2810@gmail.com</a>
+		</main>
+
+		<footer>
+			<div id="socials">
+				<a href="mailto:ndupont2810@gmail.com" target="_blank">
+					<img class="icon" width="20" height="20" src="images/icons/dark/mail.svg" alt="Mail">
+				</a>
+				<a href="https://gitlab.com/Salamint" target="_blank">
+					<img class="icon" width="20" height="20" src="images/icons/dark/gitlab.svg" alt="GitLab">
+				</a>
+				<a href="https://github.com/Salamint" target="_blank">
+					<img class="icon" width="20" height="20" src="images/icons/dark/github.svg" alt="GitHub">
+				</a>
+			</div>
+			<hr>
+			<div>
+				<p>Read the <a href="https://github.com/Salamint/Portfolio">source code</a> of this page on GitHub.</p>
+			</div>
+			<hr>
+			<div id="copyrights">
+				<p>Icons from <a href="https://fontawesome.com">FontAwesome <img src="images/icons/dark/font-awesome.svg" width="12" height="12"></a>.</p>
+			</div>
+		</footer>
+
+		<script src="scripts/main.js"></script>
+	</body>
+
+</html>

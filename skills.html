@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Portfolio</title>
+		<link rel="stylesheet" href="styles/main.css">
+	</head>
+
+	<body>
+		<header>
+			<div>
+				<h1>Portfolio</h1>
+				<button id="main-burger-button" class="menu-control" onclick="showMainMenu()">
+					<img class="icon" src="images/icons/dark/menu.svg" width="40" height="40">
+				</button>
+				<button id="hide-main-menu" class="menu-control" onclick="hideMainMenu()">
+					<img class="icon" src="images/icons/dark/xmark.svg" width="40" height="40">
+				</button>
+			</div>
+			<hr id="main-menu-separator">
+			<nav id="main-menu">
+				<a href="index.html">Home</a>
+				<a href="skills.html">Skills</a>
+				<a href="history.html">History</a>
+				<a class="contact-me" href="contact.html">Contact me</a>
+			</nav>
+		</header>
+
+		<main>
+			<div id="title">
+				<h1>Skills</h1>
+				<div id="page-controls">
+					<button id="dark-theme-toggle"></button>
+					<select id="language" name="language">
+						<option value="english" onclick="window.location.href = 'index.html'" selected>English</option>
+						<option value="french" onclick="window.location.href = 'fr/index.html'" disabled>Français</option>
+					</select>
+				</div>
+			</div>
+
+			<hr>
+
+			<div id="content">
+				<button id="nav-burger-button" class="menu-control" onclick="showNavMenu()">
+					<img class="icon" src="images/icons/dark/menu.svg" width="40" height="40">
+				</button>
+				<aside id="table-of-contents">
+					<nav>
+						<p>Contents [<a href="#">Go to the top</a>]</p>
+						<button id="hide-nav-menu" class="menu-control" onclick="hideNavMenu()">
+							<img class="icon" src="images/icons/dark/xmark.svg" width="20" height="20">
+						</button>
+						<hr>
+						<ol>
+							<li><a href="#identity">Who am I ?</a></li>
+							<li><a href="#my-skills">A short summary of my skills.</a></li>
+							<li><a href="#my-journey">My journey as a developer.</a></li>
+						</ol>
+					</nav>
+				</aside>
+
+				<section>
+					<div id="idfetch" class="terminal">
+					<div class="titlebar">
+							<p>~ : idfetch</p>
+							<button class="window-control close-window" onclick="toggleTerminal('idfetch')">
+								<img src="images/icons/dark/xmark.svg" width="18" height="18">
+							</button>
+						</div>
+						<pre>
+[<span class="c10">dupontno</span>@<span class="c10">pc-dg-039-15</span> <span class="c14">~</span>]$ idfetch
+                   -`                    <span class="c11">Nolan Dupont</span> <span class="c15">@</span> <span class="c11">BUT Informatique</span>
+                  .o+`                   <span class="c15">-------------------------------</span>
+                 `ooo/                   <span class="c11">First name</span><span class="c15">:</span> Nolan
+                `+oooo:                  <span class="c11">Last name</span><span class="c15">:</span> Dupont
+               `+oooooo:                 <span class="c11">Gender</span><span class="c15">:</span> Male
+               -+oooooo+:                <span class="c11">Age</span><span class="c15">:</span> 17 years old
+             `/:-:++oooo+:               <span class="c11">Formation</span><span class="c15">:</span> Computer science license
+            `/++++/+++++++:              <span class="c11">University</span><span class="c15">:</span> UIT 2 of Grenoble (France)
+           `/++++++++++++++:             <span class="c11">Progression</span><span class="c15">:</span> year 1 of 3
+          `/+++ooooooooooooo/`           <span class="c11">Diplomas</span><span class="c15">:</span> Baccalaureate [level 4]
+         ./ooosssso++osssssso+`          <span class="c11">Languages</span><span class="c15">:</span> C, C++, Python, Java, Assembly [68k]
+        .oossssso-````/ossssss+`         <span class="c11">Libraries used</span><span class="c15">:</span> SDL 2, Pygame, Flask
+       -osssssso.      :ssssssso.        <span class="c11">Domains</span><span class="c15">:</span> Low level programming, system admin. (Linux)
+      :osssssss/        osssso+++.       <span class="c11">Favourite editor</span><span class="c15">:</span> Neovim
+     /ossssssss/        +ssssooo/-       
+   `/ossssso+/:-        -:/+osssso+-     
+  `+sso+:-`                 `.-/+oso:    <span class="c0">&#9608;&#9608;&#9608;</span><span class="c1">&#9608;&#9608;&#9608;</span><span class="c2">&#9608;&#9608;&#9608;</span><span class="c3">&#9608;&#9608;&#9608;</span><span class="c4">&#9608;&#9608;&#9608;</span><span class="c5">&#9608;&#9608;&#9608;</span><span class="c6">&#9608;&#9608;&#9608;</span><span class="c7">&#9608;&#9608;&#9608;</span>
+ `++:.                           `-/+/   <span class="c8">&#9608;&#9608;&#9608;</span><span class="c9">&#9608;&#9608;&#9608;</span><span class="c10">&#9608;&#9608;&#9608;</span><span class="c11">&#9608;&#9608;&#9608;</span><span class="c12">&#9608;&#9608;&#9608;</span><span class="c13">&#9608;&#9608;&#9608;</span><span class="c14">&#9608;&#9608;&#9608;</span><span class="c15">&#9608;&#9608;&#9608;</span>
+ .`                                 `/
+
+[<span class="c10">dupontno</span>@<span class="c10">pc-dg-039-15</span> <span class="c14">~</span>]$</pre>
+					</div>
+				</section>
+			</div>
+		</main>
+
+		<footer>
+			<div id="socials">
+				<a href="mailto:ndupont2810@gmail.com" target="_blank">
+					<img class="icon" width="20" height="20" src="images/icons/dark/mail.svg" alt="Mail">
+				</a>
+				<a href="https://gitlab.com/Salamint" target="_blank">
+					<img class="icon" width="20" height="20" src="images/icons/dark/gitlab.svg" alt="GitLab">
+				</a>
+				<a href="https://github.com/Salamint" target="_blank">
+					<img class="icon" width="20" height="20" src="images/icons/dark/github.svg" alt="GitHub">
+				</a>
+			</div>
+			<hr>
+			<div>
+				<p>Read the <a href="https://github.com/Salamint/Portfolio">source code</a> of this page on GitHub.</p>
+			</div>
+			<hr>
+			<div id="copyrights">
+				<p>Icons from <a href="https://fontawesome.com">FontAwesome <img src="images/icons/dark/font-awesome.svg" width="12" height="12"></a>.</p>
+			</div>
+		</footer>
+
+		<script src="scripts/main.js"></script>
+	</body>
+
+</html>
