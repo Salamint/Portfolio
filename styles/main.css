@@ -220,10 +220,13 @@ section {
 	max-width: calc(100% - 250px - 40px);
 }
 
+section h2, section h3 {
+	scroll-margin-top: 148px;
+}
+
 section h2 {
 	margin-top: 50px;
 	margin-bottom: 10px;
-	scroll-margin-top: 148px;
 }
 
 section h2:first-child {
@@ -259,21 +262,44 @@ aside nav p {
 	margin-top: 10px;
 }
 
-aside nav ol {
+aside nav ul {
+	counter-reset: item;
 	margin: 0;
+	padding: 0 10px;
 }
 
-aside nav ol li {
+aside nav ul li {
+	counter-increment: item;
+	list-style-type: none;
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
 
-aside nav ol li:first-child {
+aside nav ul li:before {
+	content: counter(item) " ";
+}
+
+aside nav ul li:first-child {
 	margin-top: 15px;
 }
 
-aside nav ol li:last-child {
+aside nav ul li:last-child {
 	margin-bottom: 0;
+}
+
+aside nav ul ul {
+	counter-reset: subitem;
+	padding: 0;
+	padding-left: 10px;
+}
+
+aside nav ul ul li {
+	counter-increment: subitem;
+	margin: 5px!important;
+}
+
+aside nav ul ul li:before {
+	content: counter(item) "." counter(subitem) " ";
 }
 
 
@@ -405,6 +431,7 @@ footer #socials a:hover {
 	padding: 4px;
 }
 
+.terminal .bold { font-weight: bold; }
 .terminal .c0 { color: var(--terminal-color-0); }
 .terminal .c1 { color: var(--terminal-color-1); }
 .terminal .c2 { color: var(--terminal-color-2); }
