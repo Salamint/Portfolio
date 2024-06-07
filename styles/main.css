@@ -356,18 +356,18 @@ aside nav ul ul li:before {
 }
 
 aside nav ul ul ul {
-	counter-reset: subitem;
+	counter-reset: subsubitem;
 	padding: 0;
 	padding-left: 20px;
 }
 
 aside nav ul ul ul li {
-	counter-increment: subitem;
+	counter-increment: subsubitem;
 	margin: 5px!important;
 }
 
 aside nav ul ul ul li:before {
-	content: counter(item) "." counter(subitem) " ";
+	content: counter(item) "." counter(subitem) "." counter(subsubitem) " ";
 }
 
 
