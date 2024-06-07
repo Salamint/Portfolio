@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Portfolio</title>
+		<link rel="stylesheet" href="styles/main.css">
+	</head>
+
+	<body>
+		<header>
+			<div>
+				<h1>Portfolio</h1>
+				<button id="main-burger-button" class="menu-control" onclick="showMainMenu()">
+					<img class="icon" src="images/icons/dark/menu.svg" width="40" height="40">
+				</button>
+				<button id="hide-main-menu" class="menu-control" onclick="hideMainMenu()">
+					<img class="icon" src="images/icons/dark/xmark.svg" width="40" height="40">
+				</button>
+			</div>
+			<hr id="main-menu-separator">
+			<nav id="main-menu">
+				<a href="index.html">Home</a>
+				<a href="projects.html">Projects</a>
+				<a href="career.html">Career</a>
+				<a class="contact-me" href="contact.html">Contact me</a>
+			</nav>
+		</header>
+
+		<main>
+			<div id="title">
+				<h1>Projects</h1>
+				<div id="page-controls">
+					<button id="dark-theme-toggle"></button>
+					<select id="language" name="language">
+						<option value="english" onclick="window.location.href = 'index.html'" selected>English</option>
+						<option value="french" onclick="window.location.href = 'fr/index.html'" disabled>Français</option>
+					</select>
+				</div>
+			</div>
+
+			<hr>
+
+			<div id="content">
+				<button id="nav-burger-button" class="menu-control" onclick="showNavMenu()">
+					<img class="icon" src="images/icons/dark/menu.svg" width="40" height="40">
+				</button>
+				<aside id="table-of-contents">
+					<nav>
+						<p>Contents [<a href="#">Go to the top</a>]</p>
+						<button id="hide-nav-menu" class="menu-control" onclick="hideNavMenu()">
+							<img class="icon" src="images/icons/dark/xmark.svg" width="20" height="20">
+						</button>
+						<hr>
+						<ul>
+							<li>
+								<a href="#skills">Skills</a>
+								<ul>
+									<li>
+										<a href="#hard-skills">Hard skills</a>
+										<ul>
+											<li><a href="#application-development">Carry out application development</a></li>
+											<li><a href="#programs-optimization">Optimize computer applications</a></li>
+											<li><a href="#system-administration">Administer complex communicating IT systems</a></li>
+										<li><a href="#data-science">Manage information data</a></li>
+											<li><a href="#project-leading">Leading a project</a></li>
+											<li><a href="#working-in-a-team">Working in an IT team</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#soft-skills">Soft skills</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#projects">Projects</a>
+								<ul>
+									<li><a href="#goose-game">Game of the goose</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</aside>
+
+				<section>
+					<h2 id="skills">Skills</h2>
+					<hr>
+					<article>
+						<p>
+							The following skills represent my hard skills according to the university
+							I currently study at.
+						</p>
+
+						<h3 id="hard-skills">Hard skills</h3>
+						<hr>
+
+						<div id="skill-box">
+							<a href="#application-development">
+								<img alt="icon" class="icon" src="images/icons/dark/code.svg" width="120" height="120">
+								<p>Application development</p>
+							</a>
+							<a href="#programs-optimization">
+								<img alt="icon" class="icon" src="images/icons/dark/gear.svg" width="120" height="120">
+								<p>Programs optimization</p>
+							</a>
+							<a href="#system-administration">
+								<img alt="icon" class="icon" src="images/icons/dark/terminal.svg" width="120" height="120">
+								<p>System administration</p>
+							</a>
+							<a href="#data-science">
+								<img alt="icon" class="icon" src="images/icons/dark/database.svg" width="120" height="120">
+								<p>Data science</p>
+							</a>
+							<a href="#project-leading">
+								<img alt="icon" class="icon" src="images/icons/dark/list-check.svg" width="120" height="120">
+								<p>Project leading</p>
+							</a>
+							<a href="#working-in">
+								<img alt="icon" class="icon" src="images/icons/dark/people-group.svg" width="120" height="120">
+								<p>Working in a team</p>
+							</a>
+						</div>
+
+						<div id="skillman" class="terminal">
+							<div class="titlebar">
+								<p>~ : skillman</p>
+								<button class="window-control close-window" onclick="toggleTerminal('skillman')">
+									<img src="images/icons/dark/xmark.svg" width="18" height="18">
+								</button>
+							</div>
+							<pre>
+[<span class="c10">dupontno</span>@<span class="c10">pc-dg-039-15</span> <span class="c14">~</span>]$ sudo skillman -Syu
+[sudo] password for dupontno :
+<span class="bold"><span class="c12">::</span> Synchronizing skill databases...</span>
+ hard-skills is up to date
+ soft-skills is up to date
+<span class="bold"><span class="c12">::</span> Starting full knowledge upgrade...</span>
+resolving experience...
+looking for conflicting grades...
+
+Packages (6) application-development  programs-optimization  system-administration
+             data-science  project-leading  working-in-a-team
+
+Total Courses Size:     81.00 MiB
+Total Knowledge Size:  324.12 MiB
+Net Experience Size:   191.50 MiB
+
+<span class="bold"><span class="c12">::</span> Proceed with learning? [Y/n] y</span>
+<span class="bold"><span class="c12">::</span> Retrieving grades...</span>
+ application-development                [##########################################--------]  84%
+ programs-optimization                  [#####################################-------------]  75%
+ system-administration                  [######################################------------]  77%
+ data-science                           [#########################################---------]  81%
+ project-leading                        [#####################################-------------]  73%
+ working-in-a-team                      [####################################--------------]  73%
+Total (4/6)                             [#######################################-----------]  77%
+</pre>
+						</div>
+
+						<h4 id="application-development">Carry out application development</h4>
+						<div>
+							<b>Skill description :</b> Develop an application answering to the specifications.
+							<br>
+							<b>Sub skills :</b>
+							<ul>
+								<li>Implement simple conceptions</li>
+								<li>Elaborate simple conceptions</li>
+								<li>Apply tests and evaluate results depending on the specifications</li>
+								<li>Develop user interfaces</li>
+							</ul>
+							<b>Average grade :</b> <code>16.68/20 (83.4%)</code>
+							<br>
+							<p></p>
+						</div>
+
+						<h4 id="programs-optimization">Optimize computer applications</h4>
+						<div>
+							<b>Skill description :</b> Increase the efficiency of a program or lower its cost in both speed and resources.
+							<br>
+							<b>Sub skills :</b>
+							<ul>
+								<li>Analyze a problem methodically</li>
+								<li>Compare algorithms to resolve problems</li>
+								<li>Experiment the notion of compilation and representations of low level data</li>
+								<li>Adapt and setup mathematical tools applied to computer science</li>
+							</ul>
+							<b>Average grade :</b> <code>14.78/20 (73.9%)</code>
+							<br>
+							<p></p>
+						</div>
+
+						<h4 id="system-administration">Administer complex communicating IT systems</h4>
+						<div>
+							<b>Skill description :</b> Install and maintain a work station.
+							<br>
+							<b>Sub skills :</b>
+							<ul>
+								<li>Identify the various components of a numerical device</li>
+								<li>Use base multitask/multi user system features</li>
+								<li>Install and configure an operating system and development tools</li>
+							</ul>
+							<b>Average grade :</b> <code>15.48/20 (77.4%)</code>
+							<br>
+							<p></p>
+						</div>
+
+						<h4 id="data-science">Manage information data</h4>
+						<div>
+							<b>Skill description :</b> Conceive and setup a database from a set of specifications.
+							<br>
+							<b>Sub skills :</b>
+							<ul>
+								<li>Update and implement a relational database</li>
+								<li>Visualize data</li>
+								<li>Conceive a database from a given set of specifications</li>
+							</ul>
+							<b>Average grade :</b> <code>16.27/20 (81.35%)</code>
+							<br>
+							<p></p>
+						</div>
+
+						<h4 id="project-leading">Leading a project</h4>
+						<div>
+							<b>Skill description :</b> Identify the needs of the users and customers.
+							<br>
+							<b>Sub skills :</b>
+							<ul>
+								<li>Understand the needs of the client and the user</li>
+								<li>Setup tools to manage a project</li>
+								<li>Identify the actors and phases of a development cycle</li>
+							</ul>
+							<b>Average grade :</b> <code>14.9/20 (74.5%)</code>
+							<br>
+							<p></p>
+						</div>
+
+						<h4 id="working-in-a-team">Working in an IT team</h4>
+						<div>
+							<b>Skill description :</b> Identify the requirements to work as a team.
+							<br>
+							<b>Sub skills :</b>
+							<ul>
+								<li>Understand the numerical ecosystem</li>
+								<li>Discover the required skills for each computer science field</li>
+								<li>Identify the statuses, functions and roles of each individual member of a multidisciplinary team</li>
+								<li>Acquire interpersonal skills to work in a team</li>
+							</ul>
+							<b>Average grade :</b> <code>14.99/20 (74.95%)</code>
+							<br>
+						</div>
+
+						<h3 id="soft-skills">Soft skills</h3>
+						<hr>
+					</article>
+
+					<h2 id="projects">Projects</h2>
+					<hr>
+					<article>
+						<h3 id="goose-game">Game of the Goose</h3>
+						<hr>
+						<div>
+							<b>Description :</b> As an assignment in my second year of high school
+							with three other classmates, we recreated the <a href="https://en.wikipedia.org/wiki/Game_of_the_Goose">game of the goose</a>
+							in Python using the <a href="https://www.pygame.org/">Pygame</a> library (based of the SDL).
+							<br>
+							<b>Languages and library used :</b> We used the Python programming language,
+							as well as the <a href="https://www.pygame.org/">Pygame</a> library (based of the SDL).
+							<b>URL to the repository :</b> <a href="https://github.com/Salamint/JeuDeLOie">https://github.com/Salamint/JeuDeLOie</a>
+							<br>
+							<p>
+								The goal of the assignment was to create a small video game in a team
+								of three or four, in two weeks, using the tools of our choice.
+								We opted for Python, because at this time, not everyone in our team
+								new how to program, and Python is very intuitive and approachable for
+								beginners.
+								<br>
+								We wanted to create a video game, and two of us knew hos to use the
+								library Pygame. Is is based of the SDL, a famous C library for
+								creating 2D applications. The Pygame library is wrapper of the SDL
+								for Python, and adds some layers of simplifications.
+								<br>
+								None of us are artists, and we did not want to take bad practices
+								like using images we had no rights on, so we designed our own sprites
+								with our bare hands and paint. The board is generated using a small
+								algorithm. It reads a JSON file to know where each tile has to go,
+								and every type of tile has a JSON file to describe its attributes.
+							</p>
+						</div>
+
+						<h3>Project 2</h3>
+						<hr>
+						<p></p>
+
+						<h3>Project 3</h3>
+						<hr>
+						<p></p>
+
+						<h3>Project 4</h3>
+						<hr>
+						<p></p>
+					</article>
+				</section>
+			</div>
+		</main>
+
+		<footer>
+			<div id="socials">
+				<a href="mailto:ndupont2810@gmail.com" target="_blank">
+					<img class="icon" width="20" height="20" src="images/icons/dark/mail.svg" alt="Mail">
+				</a>
+				<a href="https://gitlab.com/Salamint" target="_blank">
+					<img class="icon" width="20" height="20" src="images/icons/dark/gitlab.svg" alt="GitLab">
+				</a>
+				<a href="https://github.com/Salamint" target="_blank">
+					<img class="icon" width="20" height="20" src="images/icons/dark/github.svg" alt="GitHub">
+				</a>
+			</div>
+			<hr>
+			<div>
+				<p>Read the <a href="https://github.com/Salamint/Portfolio">source code</a> of this page on GitHub.</p>
+			</div>
+			<hr>
+			<div id="copyrights">
+				<p>Icons from <a href="https://fontawesome.com">FontAwesome <img src="images/icons/dark/font-awesome.svg" width="12" height="12"></a>.</p>
+			</div>
+		</footer>
+
+		<script src="scripts/main.js"></script>
+	</body>
+
+</html>

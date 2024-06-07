@@ -172,6 +172,45 @@ main a {
 	color: var(--links-color);
 }
 
+main h2, main h3, main h4 {
+	margin-bottom: 10px;
+	margin-top: 30px;
+}
+
+main h2:before, main h3:before, main h4:before {
+	color: var(--links-color);
+	padding-right: 10px;
+}
+
+main h2 {
+	counter-reset: subitem;
+	counter-increment: item;
+	font-size: 20pt;
+}
+
+main h2:before {
+	content: counter(item) " ";
+}
+
+main h3 {
+	counter-reset: subsubitem;
+	counter-increment: subitem;
+	font-size: 16pt;
+}
+
+main h3:before {
+	content: counter(item) "." counter(subitem) " ";
+}
+
+main h4 {
+	counter-increment: subsubitem;
+	font-size: 14pt;
+}
+
+main h4:before {
+	content: counter(item) "." counter(subitem) "." counter(subsubitem) " ";
+}
+
 main hr {
 	border-bottom: none;
 	margin: 10px 0;
@@ -216,11 +255,21 @@ main #content {
 	padding-bottom: 8px;
 }
 
+article p {
+	text-align: justify;
+	margin-right: 250px;
+}
+
+code {
+	font-family: monospace;
+	font-size: 11pt;
+}
+
 section {
 	max-width: calc(100% - 250px - 40px);
 }
 
-section h2, section h3 {
+section h2, section h3, section h4 {
 	scroll-margin-top: 148px;
 }
 
@@ -237,6 +286,10 @@ section .contact-me {
 	margin: 15px;
 	padding: 15px;
 	text-decoration: none;
+}
+
+section ul {
+	margin-top: 0;
 }
 
 aside {
@@ -302,6 +355,22 @@ aside nav ul ul li:before {
 	content: counter(item) "." counter(subitem) " ";
 }
 
+aside nav ul ul ul {
+	counter-reset: subitem;
+	padding: 0;
+	padding-left: 20px;
+}
+
+aside nav ul ul ul li {
+	counter-increment: subitem;
+	margin: 5px!important;
+}
+
+aside nav ul ul ul li:before {
+	content: counter(item) "." counter(subitem) " ";
+}
+
+
 
 /********************************/
 /***       FOOTER RULES       ***/
@@ -366,6 +435,47 @@ footer #socials a:hover {
 
 .contact-me:hover {
 	box-shadow: 0 0 10px 0px var(--shadow-color);
+}
+
+#skill-box {
+	background-color: var(--softer-background-color);
+	border: solid 1px var(--border-color);
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: stretch;
+	gap: 10px;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+#skill-box a {
+	background-color: var(--background-color);
+	border: solid 1px var(--border-color);
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	flex-basis: 30%;
+	padding: 10px;
+	text-decoration: none;
+}
+
+#skill-box a:hover {
+	border-color: var(--links-color);
+}
+
+#skill-box a p {
+	font-size: 14pt;
+	margin: 10px;
+}
+
+.learn-more {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
 }
 
 .terminal {
@@ -485,6 +595,10 @@ footer #socials a:hover {
 	main, footer {
 		margin-left: 40px;
 		margin-right: 40px;
+	}
+
+	main article p {
+		margin-right: 0;
 	}
 }
 
